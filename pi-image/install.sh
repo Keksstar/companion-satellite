@@ -7,7 +7,7 @@ if [ ! "$BASH_VERSION" ] ; then
 fi
 
 CURRENT_ARCH=$(dpkg --print-architecture)
-if [[ "$CURRENT_ARCH" != "x64" && "$CURRENT_ARCH" != "amd64" && "$CURRENT_ARCH" != "arm64" ]]; then
+if [[ "$CURRENT_ARCH" != "x64" && "$CURRENT_ARCH" != "amd64" && "$CURRENT_ARCH" != "armhf" && "$CURRENT_ARCH" != "arm64" ]]; then
     echo "$CURRENT_ARCH is not a supported cpu architecture for running Companion Satellite."
     echo "If you are running on an arm device (such as a Raspberry Pi), make sure to use an arm64 image."
     exit 1
